@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-nav {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.content ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.content ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.button-1 {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-1:hover {
+  background-color: #0056b3;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2.5rem;
+}
+
+.content ul {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content ul li {
+  font-size: 1rem;
+}
+
+.content ul li a {
+  text-transform: capitalize;
+  color: rgba(0, 0, 3, 0.8);
+  transition: color 0.5s;
+}
+
+.content ul li:hover > a {
+  color: rgba(0, 0, 3, 1);
+  text-decoration: underline;
+}
+
+.mobile-menu-link {
+  display: block;
+  list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    left: 980px;
+  }
+
+  .content ul,
+  .button-1 {
+    display: none;
+  }
+
+  .mobile-menu-link {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all 0.3s ease-in-out;
+    width: 1000px;
+  }
+
+  .mobile-menu-link.show {
+    display: flex;
+  }
+
+  .mobile-menu-link ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+  }
+
+  .mobile-menu-link ul li {
+    width: 100%;
+    display: flex;
+  }
+
+  .mobile-menu-link ul li a {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+  }
+}
